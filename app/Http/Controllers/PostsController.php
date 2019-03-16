@@ -16,7 +16,9 @@ class PostsController extends Controller
         //  dd(Post::all());
 
         return view('posts.index', [
-            'posts' => Post::all()
+            // 'posts' => Post::all()
+            'posts' => Post::with('User')->get()
+
         ]);
     }
     public function destroy(Post $post)
@@ -24,7 +26,9 @@ class PostsController extends Controller
         //  dd(Post::all());
         $post->delete();
         return view('posts.index', [
-            'posts' => Post::all()
+            // 'posts' => Post::all()
+             'posts' => Post::all()
+
         ]);
         
     }
