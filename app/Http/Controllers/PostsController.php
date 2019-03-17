@@ -5,15 +5,16 @@ use App\Http\Requests\post\StorePostRequest;
 use App\Http\Requests\post\UpdatePostRequest;
 
 use Illuminate\Http\Request;
-use App\Post;
-use App\User;
+use App\Post;//use mode post or table  post
+use App\User;//use table user
 
 class PostsController extends Controller
 {
    
     public function index()
     {
-        //  dd(Post::all());
+        //  dd(Post::all()); //call all in table post(model post)
+        //send this parameter to fn index in view in parameter posts
 
         return view('posts.index', [
             // 'posts' => Post::all()

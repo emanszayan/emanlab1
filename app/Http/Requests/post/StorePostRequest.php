@@ -35,7 +35,7 @@ class StorePostRequest extends FormRequest
     {
         return[
                 'title.required'=>'should enter title',
-                'title.min'=>'should enter more than min'
+                'title.min'=>'should enter more than min',
         ];
     }
 }
